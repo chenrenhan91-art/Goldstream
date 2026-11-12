@@ -15,7 +15,13 @@ QUOTED_ROOT = re.compile(r"""(?P<q>["'])/(?!/)""")
 
 
 def rewrite(text: str) -> str:
-    return QUOTED_ROOT.sub(lambda match: f"{match.group('q')}{PREFIX}/", text)
+    def repl(match: re.Match) -> str:
+        # Leave regex literals such as /'/g untouched. Real root paths are attributes or strings.
+        if match.start() > 0 and text[match.start() - 1] == "/":
+            return match.group(0)
+        return f"{match.group('q')}{PREFIX}/"
+
+    return QUOTED_ROOT.sub(repl, text)
 
 
 def should_skip(path: Path) -> bool:
