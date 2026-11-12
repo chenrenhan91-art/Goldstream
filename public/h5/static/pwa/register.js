@@ -1,1 +1,0 @@
-// SnackPlot PWA Register

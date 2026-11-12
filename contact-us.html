@@ -1,53 +1,218 @@
-<!doctype html><html lang="en-US"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"><script id="seo-first-paint">// 在首屏绘制前确定启动状态，正常加载直接展示业务页，不先闪现另一套 SEO 布局。
-			(function () {
-				var root = document.documentElement
-				var completed = false
-				var fallbackTimer = null
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us – Goldstream Technology Inc</title>
+  <meta name="description" content="Contact Goldstream Technology Inc customer service for product inquiries, order tracking, shipping questions, and returns support.">
+  <link rel="stylesheet" href="/h5/static/seo.css">
+</head>
+<body>
 
-				function complete() {
-					if (completed) {
-						return
-					}
-					completed = true
-					clearTimeout(fallbackTimer)
-					window.removeEventListener('error', handleResourceError, true)
-					root.classList.remove('seo-app-starting')
-					delete window.__dramaSeoFirstPaint
-				}
+  <div class="announcement-bar">
+    <div class="announcement-inner">
+      <div class="announcement-promos">
+        <span class="announcement-item">
+          <span data-i18n="top_shipping">🌎 Flat-Rate Standard Shipping ($15.00 USD) on All Orders</span>
+          <a href="/source.html#shipping" data-i18n="top_shipping_link">Shipping Policy</a>
+        </span>
+        <span class="announcement-item" data-i18n="top_promo">🏷️ Enjoy up to 30% Off Seasonal Home Collections</span>
+      </div>
+      <div class="announcement-controls">
+        <select class="top-select js-currency-select" aria-label="Currency selector" onchange="window.GoldstreamStore.setCurrency(this.value)">
+          <option value="USD">United States (USD $)</option>
+          <option value="GBP">United Kingdom (GBP £)</option>
+          <option value="EUR">European Union (EUR €)</option>
+          <option value="CAD">Canada (CAD $)</option>
+          <option value="AUD">Australia (AUD $)</option>
+          <option value="HKD">Hong Kong SAR (HKD $)</option>
+        </select>
+        <select class="top-select js-lang-select" aria-label="Language selector" onchange="window.GoldstreamStore.setLang(this.value)">
+          <option value="en">English</option>
+          <option value="zh">繁體中文</option>
+          <option value="de">Deutsch</option>
+        </select>
+      </div>
+    </div>
+  </div>
 
-				function handleResourceError(event) {
-					var script = event.target
-					if (script && script.tagName === 'SCRIPT' && script.src.indexOf('/h5/static/js/') !== -1) {
-						complete()
-					}
-				}
+  <header class="site-header">
+    <div class="header-main">
+      <div class="header-left">
+        <form class="search-trigger-bar" action="/categories.html" method="get">
+          <span>🔍</span>
+          <input type="search" name="q" placeholder="Search furniture, lighting, rugs..." data-i18n-placeholder="search_placeholder" aria-label="Search store">
+        </form>
+      </div>
 
-				root.classList.add('seo-app-starting')
-				window.__dramaSeoFirstPaint = { complete: complete }
-				window.addEventListener('error', handleResourceError, true)
-				// 15 秒仅用于启动失效兜底，不延迟正常展示；脚本失败或超时后恢复原始正文。
-				fallbackTimer = setTimeout(complete, 15000)
-			})()</script><link rel="stylesheet" href="/h5/static/seo.css?v=157fa5699038"><script>// 旧登录、支付和授权桥接地址继续可用；公开剧页由服务器先返回301。
-			if (location.pathname.indexOf('/h5/pages/') === 0) {
-				history.replaceState(history.state, '', location.pathname.slice(3) + location.search + location.hash)
-			}</script><link rel="manifest" href="/h5/static/pwa/pwa-manifest.json?v=cda121f0e956"><meta name="theme-color" content="#070a0f"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="apple-touch-icon" href="/h5/static/icons/192x192.png?v=cda121f0e956"><script src="/h5/static/pwa/mobile-shell.js"></script><link rel="stylesheet" href="/h5/static/index.ed4a2d2b.css"/><link rel="icon" href="/h5/static/icons/192x192.png?v=cda121f0e956"><script src="/h5/static/pwa/register.js?route=20261105" defer="defer"></script><script defer="defer" src="/h5/static/js/chunk-vendors.ead77501.js"></script><script defer="defer" src="/h5/static/js/index.c3f47533.js"></script><title data-seo="1">Contact Us – SnackPlot</title><link data-seo="1" rel="canonical" href="https://snackplot.com/contact-us"><meta data-seo="1" name="description" content="Get in touch with SnackPlot for support, content inquiries, or partnership questions."><meta data-seo="1" name="robots" content="index,follow,max-image-preview:large"><meta data-seo="1" name="twitter:card" content="summary_large_image"><meta data-seo="1" name="twitter:title" content="Contact Us – SnackPlot"><meta data-seo="1" name="twitter:description" content="Get in touch with SnackPlot for support, content inquiries, or partnership questions."><meta data-seo="1" name="twitter:image" content="https://snackplot-s3-bucket.s3.us-west-2.amazonaws.com/uploads/20261029/8846d35c51d8e22f8bd157f6bd7341f4.png"><meta data-seo="1" name="twitter:image:alt" content="SnackPlot"><meta data-seo="1" property="og:type" content="website"><meta data-seo="1" property="og:site_name" content="SnackPlot"><meta data-seo="1" property="og:locale" content="en_US"><meta data-seo="1" property="og:title" content="Contact Us – SnackPlot"><meta data-seo="1" property="og:description" content="Get in touch with SnackPlot for support, content inquiries, or partnership questions."><meta data-seo="1" property="og:url" content="https://snackplot.com/contact-us"><meta data-seo="1" property="og:image" content="https://snackplot-s3-bucket.s3.us-west-2.amazonaws.com/uploads/20261029/8846d35c51d8e22f8bd157f6bd7341f4.png"><meta data-seo="1" property="og:image:alt" content="SnackPlot"></head><body><noscript><strong>Please enable JavaScript to continue.</strong></noscript><main id="seo-content" class="seo-content"><nav><a href="/">SnackPlot</a> <a href="/source/">Platforms</a> <a href="/categories">Genres</a> <a href="/about-us">About Us</a> <a href="/contact-us">Contact Us</a></nav><nav class="seo-breadcrumbs"><a href="/">Home</a> / <a href="/contact-us">Contact Us</a></nav><h1>Contact Us</h1><p>Get in touch with SnackPlot for support, content inquiries, or partnership questions.</p>
-<section style="background:#151b28;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;max-width:680px;">
-  <h2>Contact SnackPlot</h2>
-  <p style="color:#9aa3b5;margin-bottom:20px;">Have questions about a short drama series, episodes, or platform availability? Send us a message below.</p>
-  <form onsubmit="event.preventDefault(); this.innerHTML='<div style=\'padding:20px;background:#111622;border-radius:10px;color:#fff;\'><strong>Thank you!</strong> Your message has been received by SnackPlot.</div>';" style="display:grid;gap:16px;">
-    <div style="display:grid;gap:6px;">
-      <label style="font-size:13px;font-weight:600;color:#cbd2e1;">Name</label>
-      <input type="text" required placeholder="Your name" style="height:42px;padding:0 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.12);background:#0d111a;color:#fff;" />
+      <a href="/index.html" class="brand-logo">
+        <span class="brand-logo-title">Goldstream Technology Inc</span>
+        <span class="brand-logo-sub">Curated Home Decor • Lighting • Artisan Rugs</span>
+      </a>
+
+      <div class="header-right">
+        <a href="/genres.html" class="header-action-btn"><span>Checkout</span></a>
+        <button type="button" class="header-action-btn" onclick="window.GoldstreamStore.openCartDrawer()">
+          <span>🛒 Cart</span>
+          <span class="cart-badge js-cart-count">0</span>
+        </button>
+      </div>
     </div>
-    <div style="display:grid;gap:6px;">
-      <label style="font-size:13px;font-weight:600;color:#cbd2e1;">Email</label>
-      <input type="email" required placeholder="you@example.com" style="height:42px;padding:0 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.12);background:#0d111a;color:#fff;" />
+
+    <nav class="primary-nav" aria-label="Main Categories">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="/categories.html?cat=new" class="nav-link nav-link-new" data-i18n="nav_new">New</a></li>
+        <li class="nav-item"><a href="/categories.html?cat=furniture" class="nav-link" data-i18n="nav_furniture">Furniture</a></li>
+        <li class="nav-item"><a href="/categories.html?cat=accessories" class="nav-link" data-i18n="nav_accessories">Home Accessories</a></li>
+        <li class="nav-item"><a href="/categories.html?cat=lighting" class="nav-link" data-i18n="nav_lighting">Lighting</a></li>
+        <li class="nav-item"><a href="/categories.html?cat=wall-decor" class="nav-link" data-i18n="nav_wall">Wall Decor</a></li>
+        <li class="nav-item"><a href="/categories.html?cat=rugs" class="nav-link" data-i18n="nav_rugs">Rugs</a></li>
+        <li class="nav-item"><a href="/categories.html?cat=kitchen" class="nav-link" data-i18n="nav_kitchen">Kitchen</a></li>
+        <li class="nav-item"><a href="/categories.html?style=japandi" class="nav-link" data-i18n="nav_style">By Style</a></li>
+        <li class="nav-item"><a href="/about-us.html" class="nav-link" data-i18n="nav_about">About</a></li>
+        <li class="nav-item"><a href="/contact-us.html" class="nav-link active" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="page-hero-title">Contact Us</h1>
+        <p class="page-breadcrumb"><a href="/index.html">Home</a> / Contact Us</p>
+      </div>
+    </section>
+
+    <div class="checkout-grid">
+      <div>
+        <div class="form-section-card">
+          <h2 class="form-section-title">Send Us a Message</h2>
+          <p style="color:var(--text-muted);font-size:0.92rem;margin-bottom:20px;">
+            Questions, styling advice, or order inquiries? We would love to hear from you. If your question is about delivery times or shipping fees, please visit our <a href="/source.html#shipping" style="text-decoration:underline;color:var(--accent-gold);">Shipping &amp; Delivery</a> section. For all other enquiries, drop us a message below and our team will respond within 1 business day.
+          </p>
+          <form onsubmit="event.preventDefault();window.GoldstreamStore.showToast('Thank you! Your message has been sent to Goldstream Technology Inc support.');this.reset();">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Full Name *</label>
+                <input id="contact-name" type="text" class="form-control" placeholder="Jane Doe" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Email Address *</label>
+                <input id="contact-email" type="email" class="form-control" placeholder="jane@example.com" required>
+              </div>
+            </div>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="contact-phone">Phone Number (Optional)</label>
+                <input id="contact-phone" type="tel" class="form-control" placeholder="+1 (555) 000-0000">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-order">Order Number (If applicable)</label>
+                <input id="contact-order" type="text" class="form-control" placeholder="e.g. GS-2026-8491">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-msg">Your Message *</label>
+              <textarea id="contact-msg" rows="5" class="form-control" placeholder="How can we help you decorate your space today?" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <div>
+        <div class="form-section-card" style="background:var(--bg-warm);">
+          <h2 class="form-section-title">Direct Corporate Contact</h2>
+          <ul class="footer-contact-list" style="color:var(--text-main);">
+            <li>
+              <strong style="color:var(--text-main);">Company Name:</strong>
+              Goldstream Technology Inc
+            </li>
+            <li>
+              <strong style="color:var(--text-main);">Registered Corporate Address:</strong>
+              2108 N ST STE N, Sacramento, CA 95816, United States
+            </li>
+            <li>
+              <strong style="color:var(--text-main);">Customer Support &amp; Returns Email:</strong>
+              <a href="mailto:support@goldstreamtech.com" style="color:var(--accent-gold);text-decoration:underline;">support@goldstreamtech.com</a>
+            </li>
+            <li>
+              <strong style="color:var(--text-main);">Customer Care Telephone:</strong>
+              <a href="tel:+19165550198" style="color:var(--accent-gold);">+1 (916) 555-0198</a>
+            </li>
+            <li>
+              <strong style="color:var(--text-main);">Customer Service Hours:</strong>
+              Monday – Friday: 9:00 AM – 6:00 PM PST
+            </li>
+          </ul>
+
+          <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border-color);font-size:0.86rem;color:var(--text-muted);">
+            <p style="margin-bottom:8px;"><strong>Quick Policy Links:</strong></p>
+            <p><a href="/source.html#shipping" style="text-decoration:underline;">→ Shipping &amp; Delivery ($15.00 Flat Rate)</a></p>
+            <p><a href="/source.html#returns" style="text-decoration:underline;">→ Returns &amp; Exchange Policy</a></p>
+            <p><a href="/source.html#terms" style="text-decoration:underline;">→ Terms &amp; Service</a></p>
+            <p><a href="/source.html#privacy" style="text-decoration:underline;">→ Privacy &amp; Policy</a></p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div style="display:grid;gap:6px;">
-      <label style="font-size:13px;font-weight:600;color:#cbd2e1;">Message</label>
-      <textarea rows="5" required placeholder="Tell us how we can help..." style="padding:12px 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.12);background:#0d111a;color:#fff;"></textarea>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 class="footer-col-title">Collections</h3>
+          <ul class="footer-links">
+            <li><a href="/categories.html?cat=new">New Arrivals</a></li>
+            <li><a href="/categories.html?cat=furniture">Furniture</a></li>
+            <li><a href="/categories.html?cat=accessories">Home Accessories</a></li>
+            <li><a href="/categories.html?cat=lighting">Lighting</a></li>
+            <li><a href="/categories.html?cat=wall-decor">Wall Decor &amp; Clocks</a></li>
+            <li><a href="/categories.html?cat=rugs">Hand-Tufted &amp; Persian Rugs</a></li>
+            <li><a href="/categories.html?cat=kitchen">Kitchen &amp; Tableware</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Terms &amp; Policies</h3>
+          <ul class="footer-links">
+            <li><a href="/about-us.html">About</a></li>
+            <li><a href="/contact-us.html">Contact</a></li>
+            <li><a href="/source.html#terms">Terms &amp; Service</a></li>
+            <li><a href="/source.html#privacy">Privacy &amp; Policy</a></li>
+            <li><a href="/source.html#shipping">Shipping &amp; Delivery</a></li>
+            <li><a href="/source.html#returns">Returns &amp; Exchange</a></li>
+            <li><a href="/genres.html">Guest Checkout</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Company Information</h3>
+          <ul class="footer-contact-list">
+            <li><strong>Company Name:</strong> Goldstream Technology Inc</li>
+            <li><strong>Registered Address:</strong> 2108 N ST STE N, Sacramento, CA 95816, United States</li>
+            <li><strong>Customer Support Email:</strong> <a href="mailto:support@goldstreamtech.com" style="text-decoration:underline;">support@goldstreamtech.com</a></li>
+            <li><strong>Telephone:</strong> <a href="tel:+19165550198">+1 (916) 555-0198</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-col-title">About Goldstream Technology Inc</h3>
+          <p style="color:#BDB7AE;font-size:0.88rem;line-height:1.7;">
+            Your home is as unique as you are—let us help you make it your own with unique pieces that bring delight and personal charm to your space.
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copyright">© 2026 Goldstream Technology Inc All rights reserved.</div>
+        <div class="footer-payment-icons">
+          <span class="payment-pill">VISA</span>
+          <span class="payment-pill">MASTERCARD</span>
+          <span class="payment-pill">AMEX</span>
+          <span class="payment-pill">PAYPAL</span>
+        </div>
+      </div>
     </div>
-    <button type="submit" style="width:fit-content;padding:11px 24px;border-radius:999px;background:linear-gradient(135deg,#ff3b5c,#ff6b3d);color:#fff;font-weight:600;font-size:14px;border:none;cursor:pointer;">Submit Message</button>
-  </form>
-</section>
-</main><script id="seo-bootstrap" type="application/json">{"kind": "contact", "path": "/contact-us", "heading": "Contact Us", "description": "Get in touch with SnackPlot for support, content inquiries, or partnership questions."}</script><div id="app"></div></body></html>
+  </footer>
+
+  <script src="/h5/static/pwa/register.js"></script>
+</body>
+</html>

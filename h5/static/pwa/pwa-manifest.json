@@ -1,16 +1,18 @@
 {
-  "name": "SnackPlot",
-  "short_name": "SnackPlot",
-  "description": "Discover short dramas on SnackPlot. Explore romance, werewolf, revenge, and billionaire stories, find your next favorite series, and start watching online.",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#070a0f",
-  "theme_color": "#070a0f",
-  "icons": [
-    {
-      "src": "https://snackplot-s3-bucket.s3.us-west-2.amazonaws.com/uploads/20261029/8846d35c51d8e22f8bd157f6bd7341f4.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    }
-  ]
+  "company": {
+    "name": "Goldstream Technology Inc",
+    "address": "2108 N ST STE N, Sacramento, CA 95816, United States",
+    "email": "support@goldstreamtech.com",
+    "phone": "+1 (916) 555-0198",
+    "copyright": "© 2026 Goldstream Technology Inc All rights reserved."
+  },
+  "shippingUSD": 15.00,
+  "currencies": {
+    "USD": { "code": "USD", "symbol": "US$", "rate": 1.00, "label": "United States (USD $)" },
+    "GBP": { "code": "GBP", "symbol": "£", "rate": 0.79, "label": "United Kingdom (GBP £)" },
+    "EUR": { "code": "EUR", "symbol": "€", "rate": 0.92, "label": "European Union (EUR €)" },
+    "CAD": { "code": "CAD", "symbol": "CA$", "rate": 1.38, "label": "Canada (CAD $)" },
+    "AUD": { "code": "AUD", "symbol": "AU$", "rate": 1.52, "label": "Australia (AUD $)" },
+    "HKD": { "code": "HKD", "symbol": "HK$", "rate": 7.80, "label": "Hong Kong SAR (HKD $)" }
+  }
 }

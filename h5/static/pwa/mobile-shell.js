@@ -1,2 +1,1 @@
-// SnackPlot Mobile Shell
-window.__snackplotShellLoaded = true;
+console.log('test');

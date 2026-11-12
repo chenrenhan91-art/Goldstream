@@ -1,53 +1,13 @@
-<!doctype html><html lang="en-US"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"><script id="seo-first-paint">// 在首屏绘制前确定启动状态，正常加载直接展示业务页，不先闪现另一套 SEO 布局。
-			(function () {
-				var root = document.documentElement
-				var completed = false
-				var fallbackTimer = null
-
-				function complete() {
-					if (completed) {
-						return
-					}
-					completed = true
-					clearTimeout(fallbackTimer)
-					window.removeEventListener('error', handleResourceError, true)
-					root.classList.remove('seo-app-starting')
-					delete window.__dramaSeoFirstPaint
-				}
-
-				function handleResourceError(event) {
-					var script = event.target
-					if (script && script.tagName === 'SCRIPT' && script.src.indexOf('/h5/static/js/') !== -1) {
-						complete()
-					}
-				}
-
-				root.classList.add('seo-app-starting')
-				window.__dramaSeoFirstPaint = { complete: complete }
-				window.addEventListener('error', handleResourceError, true)
-				// 15 秒仅用于启动失效兜底，不延迟正常展示；脚本失败或超时后恢复原始正文。
-				fallbackTimer = setTimeout(complete, 15000)
-			})()</script><link rel="stylesheet" href="/h5/static/seo.css?v=157fa5699038"><script>// 旧登录、支付和授权桥接地址继续可用；公开剧页由服务器先返回301。
-			if (location.pathname.indexOf('/h5/pages/') === 0) {
-				history.replaceState(history.state, '', location.pathname.slice(3) + location.search + location.hash)
-			}</script><link rel="manifest" href="/h5/static/pwa/pwa-manifest.json?v=cda121f0e956"><meta name="theme-color" content="#070a0f"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="apple-touch-icon" href="/h5/static/icons/192x192.png?v=cda121f0e956"><script src="/h5/static/pwa/mobile-shell.js"></script><link rel="stylesheet" href="/h5/static/index.ed4a2d2b.css"/><link rel="icon" href="/h5/static/icons/192x192.png?v=cda121f0e956"><script src="/h5/static/pwa/register.js?route=20261105" defer="defer"></script><script defer="defer" src="/h5/static/js/chunk-vendors.ead77501.js"></script><script defer="defer" src="/h5/static/js/index.c3f47533.js"></script><title data-seo="1">Contact Us – SnackPlot</title><link data-seo="1" rel="canonical" href="https://snackplot.com/contact-us"><meta data-seo="1" name="description" content="Get in touch with SnackPlot for support, content inquiries, or partnership questions."><meta data-seo="1" name="robots" content="index,follow,max-image-preview:large"><meta data-seo="1" name="twitter:card" content="summary_large_image"><meta data-seo="1" name="twitter:title" content="Contact Us – SnackPlot"><meta data-seo="1" name="twitter:description" content="Get in touch with SnackPlot for support, content inquiries, or partnership questions."><meta data-seo="1" name="twitter:image" content="https://snackplot-s3-bucket.s3.us-west-2.amazonaws.com/uploads/20261029/8846d35c51d8e22f8bd157f6bd7341f4.png"><meta data-seo="1" name="twitter:image:alt" content="SnackPlot"><meta data-seo="1" property="og:type" content="website"><meta data-seo="1" property="og:site_name" content="SnackPlot"><meta data-seo="1" property="og:locale" content="en_US"><meta data-seo="1" property="og:title" content="Contact Us – SnackPlot"><meta data-seo="1" property="og:description" content="Get in touch with SnackPlot for support, content inquiries, or partnership questions."><meta data-seo="1" property="og:url" content="https://snackplot.com/contact-us"><meta data-seo="1" property="og:image" content="https://snackplot-s3-bucket.s3.us-west-2.amazonaws.com/uploads/20261029/8846d35c51d8e22f8bd157f6bd7341f4.png"><meta data-seo="1" property="og:image:alt" content="SnackPlot"></head><body><noscript><strong>Please enable JavaScript to continue.</strong></noscript><main id="seo-content" class="seo-content"><nav><a href="/">SnackPlot</a> <a href="/source/">Platforms</a> <a href="/categories">Genres</a> <a href="/about-us">About Us</a> <a href="/contact-us">Contact Us</a></nav><nav class="seo-breadcrumbs"><a href="/">Home</a> / <a href="/contact-us">Contact Us</a></nav><h1>Contact Us</h1><p>Get in touch with SnackPlot for support, content inquiries, or partnership questions.</p>
-<section style="background:#151b28;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;max-width:680px;">
-  <h2>Contact SnackPlot</h2>
-  <p style="color:#9aa3b5;margin-bottom:20px;">Have questions about a short drama series, episodes, or platform availability? Send us a message below.</p>
-  <form onsubmit="event.preventDefault(); this.innerHTML='<div style=\'padding:20px;background:#111622;border-radius:10px;color:#fff;\'><strong>Thank you!</strong> Your message has been received by SnackPlot.</div>';" style="display:grid;gap:16px;">
-    <div style="display:grid;gap:6px;">
-      <label style="font-size:13px;font-weight:600;color:#cbd2e1;">Name</label>
-      <input type="text" required placeholder="Your name" style="height:42px;padding:0 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.12);background:#0d111a;color:#fff;" />
-    </div>
-    <div style="display:grid;gap:6px;">
-      <label style="font-size:13px;font-weight:600;color:#cbd2e1;">Email</label>
-      <input type="email" required placeholder="you@example.com" style="height:42px;padding:0 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.12);background:#0d111a;color:#fff;" />
-    </div>
-    <div style="display:grid;gap:6px;">
-      <label style="font-size:13px;font-weight:600;color:#cbd2e1;">Message</label>
-      <textarea rows="5" required placeholder="Tell us how we can help..." style="padding:12px 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.12);background:#0d111a;color:#fff;"></textarea>
-    </div>
-    <button type="submit" style="width:fit-content;padding:11px 24px;border-radius:999px;background:linear-gradient(135deg,#ff3b5c,#ff6b3d);color:#fff;font-weight:600;font-size:14px;border:none;cursor:pointer;">Submit Message</button>
-  </form>
-</section>
-</main><script id="seo-bootstrap" type="application/json">{"kind": "contact", "path": "/contact-us", "heading": "Contact Us", "description": "Get in touch with SnackPlot for support, content inquiries, or partnership questions."}</script><div id="app"></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us – Goldstream Technology Inc</title>
+  <meta http-equiv="refresh" content="0; url=/contact-us.html">
+  <link rel="stylesheet" href="/h5/static/seo.css">
+</head>
+<body>
+  <script>window.location.replace('/contact-us.html');</script>
+  <p style="padding:40px;text-align:center;"><a href="/contact-us.html">Continue to Contact Goldstream Technology Inc →</a></p>
+</body>
+</html>
