@@ -1,0 +1,199 @@
+/* SnackPlot Official Stylesheet - 1:1 Replica */
+:root {
+  --bg: #070a0f;
+  --bg-elevated: #111622;
+  --bg-card: #151b28;
+  --bg-hover: #1c2436;
+  --text: #f3f5f9;
+  --text-muted: #9aa3b5;
+  --border: rgba(255, 255, 255, 0.08);
+  --accent: #ff3b5c;
+  --accent-grad: linear-gradient(135deg, #ff3b5c 0%, #ff6b3d 100%);
+  --max-w: 1320px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.18s ease, opacity 0.18s ease, transform 0.2s ease;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Base SEO Content Layout (#seo-content) */
+.seo-content {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 20px 64px;
+}
+
+.seo-content > nav:first-child {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  height: 68px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.seo-content > nav:first-child a {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
+.seo-content > nav:first-child a:first-child {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: var(--accent-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-left: 0;
+  margin-right: 12px;
+}
+
+.seo-content > nav:first-child a:hover {
+  color: var(--text);
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.seo-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.seo-breadcrumbs a {
+  color: var(--text-muted);
+}
+
+.seo-breadcrumbs a:hover {
+  color: var(--text);
+}
+
+.seo-content > h1 {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.seo-content > p {
+  font-size: 15px;
+  color: var(--text-muted);
+  max-width: 760px;
+  margin-bottom: 32px;
+}
+
+.seo-content > section {
+  margin-top: 40px;
+}
+
+.seo-content > section > h2 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.seo-content > section > h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 20px;
+  border-radius: 2px;
+  background: var(--accent-grad);
+}
+
+.seo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+  gap: 20px;
+}
+
+.seo-grid > a {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.seo-grid > a:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 59, 92, 0.4);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
+.seo-grid > a > img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  background: var(--bg-elevated);
+}
+
+.seo-grid > a > span:first-of-type {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  padding: 12px 12px 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.35;
+}
+
+.seo-grid > a > span:nth-of-type(2),
+.seo-grid > a > span:nth-of-type(3) {
+  font-size: 12px;
+  color: var(--text-muted);
+  padding: 2px 12px 10px;
+}
+
+.seo-grid > a > p {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  padding: 4px 12px 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.45;
+}
+
+/* When #app is mounted and active, hide #seo-content if .sp-app-mounted is set */
+html.sp-app-mounted #seo-content {
+  display: none;
+}

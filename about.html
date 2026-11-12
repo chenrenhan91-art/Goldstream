@@ -1,0 +1,40 @@
+<!doctype html><html lang="en-US"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"><script id="seo-first-paint">// 在首屏绘制前确定启动状态，正常加载直接展示业务页，不先闪现另一套 SEO 布局。
+			(function () {
+				var root = document.documentElement
+				var completed = false
+				var fallbackTimer = null
+
+				function complete() {
+					if (completed) {
+						return
+					}
+					completed = true
+					clearTimeout(fallbackTimer)
+					window.removeEventListener('error', handleResourceError, true)
+					root.classList.remove('seo-app-starting')
+					delete window.__dramaSeoFirstPaint
+				}
+
+				function handleResourceError(event) {
+					var script = event.target
+					if (script && script.tagName === 'SCRIPT' && script.src.indexOf('/h5/static/js/') !== -1) {
+						complete()
+					}
+				}
+
+				root.classList.add('seo-app-starting')
+				window.__dramaSeoFirstPaint = { complete: complete }
+				window.addEventListener('error', handleResourceError, true)
+				// 15 秒仅用于启动失效兜底，不延迟正常展示；脚本失败或超时后恢复原始正文。
+				fallbackTimer = setTimeout(complete, 15000)
+			})()</script><link rel="stylesheet" href="/h5/static/seo.css?v=157fa5699038"><script>// 旧登录、支付和授权桥接地址继续可用；公开剧页由服务器先返回301。
+			if (location.pathname.indexOf('/h5/pages/') === 0) {
+				history.replaceState(history.state, '', location.pathname.slice(3) + location.search + location.hash)
+			}</script><link rel="manifest" href="/h5/static/pwa/pwa-manifest.json?v=cda121f0e956"><meta name="theme-color" content="#070a0f"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="apple-touch-icon" href="/h5/static/icons/192x192.png?v=cda121f0e956"><script src="/h5/static/pwa/mobile-shell.js"></script><link rel="stylesheet" href="/h5/static/index.ed4a2d2b.css"/><link rel="icon" href="/h5/static/icons/192x192.png?v=cda121f0e956"><script src="/h5/static/pwa/register.js?route=20261105" defer="defer"></script><script defer="defer" src="/h5/static/js/chunk-vendors.ead77501.js"></script><script defer="defer" src="/h5/static/js/index.c3f47533.js"></script><title data-seo="1">About Us – SnackPlot</title><link data-seo="1" rel="canonical" href="https://snackplot.com/about-us"><meta data-seo="1" name="description" content="Discover short dramas on SnackPlot. Explore romance, werewolf, revenge, and billionaire stories, find your next favorite series, and start watching online."><meta data-seo="1" name="robots" content="index,follow,max-image-preview:large"><meta data-seo="1" name="twitter:card" content="summary_large_image"><meta data-seo="1" name="twitter:title" content="About Us – SnackPlot"><meta data-seo="1" name="twitter:description" content="Discover short dramas on SnackPlot. Explore romance, werewolf, revenge, and billionaire stories, find your next favorite series, and start watching online."><meta data-seo="1" name="twitter:image" content="https://snackplot-s3-bucket.s3.us-west-2.amazonaws.com/uploads/20261029/8846d35c51d8e22f8bd157f6bd7341f4.png"><meta data-seo="1" name="twitter:image:alt" content="SnackPlot"><meta data-seo="1" property="og:type" content="website"><meta data-seo="1" property="og:site_name" content="SnackPlot"><meta data-seo="1" property="og:locale" content="en_US"><meta data-seo="1" property="og:title" content="About Us – SnackPlot"><meta data-seo="1" property="og:description" content="Discover short dramas on SnackPlot. Explore romance, werewolf, revenge, and billionaire stories, find your next favorite series, and start watching online."><meta data-seo="1" property="og:url" content="https://snackplot.com/about-us"><meta data-seo="1" property="og:image" content="https://snackplot-s3-bucket.s3.us-west-2.amazonaws.com/uploads/20261029/8846d35c51d8e22f8bd157f6bd7341f4.png"><meta data-seo="1" property="og:image:alt" content="SnackPlot"></head><body><noscript><strong>Please enable JavaScript to continue.</strong></noscript><main id="seo-content" class="seo-content"><nav><a href="/">SnackPlot</a> <a href="/source/">Platforms</a> <a href="/categories">Genres</a> <a href="/about-us">About Us</a> <a href="/contact-us">Contact Us</a></nav><nav class="seo-breadcrumbs"><a href="/">Home</a> / <a href="/about-us">About Us</a></nav><h1>About Us</h1><p>Discover short dramas on SnackPlot. Explore romance, werewolf, revenge, and billionaire stories, find your next favorite series, and start watching online.</p>
+<section style="background:#151b28;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;max-width:820px;">
+  <h2>About SnackPlot</h2>
+  <p style="color:#cbd2e1;line-height:1.75;margin-bottom:16px;">Discover short dramas on SnackPlot. Explore romance, werewolf, revenge, and billionaire stories, find your next favorite series, and start watching online.</p>
+  <p style="color:#9aa3b5;line-height:1.75;margin-bottom:16px;">SnackPlot curates vertical mini series and bite-sized drama episodes across Marriage, Romance, Revenge, Fantasy, Paranormal, Werewolf, and Billionaire genres. Browse MUST-WATCH picks, NEW-WATCH releases, and TOP OF THIS WEEK rankings anytime.</p>
+  <div style="margin-top:24px;"><a href="/categories" style="display:inline-flex;padding:10px 22px;border-radius:999px;background:linear-gradient(135deg,#ff3b5c,#ff6b3d);color:#fff;font-weight:600;font-size:14px;">Explore Genres</a></div>
+</section>
+</main><script id="seo-bootstrap" type="application/json">{"kind": "about", "path": "/about-us", "heading": "About Us", "description": "Discover short dramas on SnackPlot. Explore romance, werewolf, revenge, and billionaire stories, find your next favorite series, and start watching online."}</script><div id="app"></div></body></html>
