@@ -8,7 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "_site"
-PREFIX = "/Goldstream"
+PREFIX = ""
 SKIP_DIRS = {".git", "node_modules", ".next", "_site", ".github"}
 TEXT_SUFFIXES = {".html", ".css", ".js", ".json", ".svg", ".webmanifest", ".txt", ".xml"}
 QUOTED_ROOT = re.compile(r"""(?P<q>["'])/(?!/)""")
@@ -59,8 +59,8 @@ def main() -> None:
 
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
     index = (OUT / "index.html").read_text(encoding="utf-8")
-    if '/Goldstream/h5/static/seo.css' not in index:
-        raise SystemExit("homepage stylesheet was not rewritten for /Goldstream/")
+    if '/h5/static/seo.css' not in index:
+        raise SystemExit("homepage stylesheet is missing")
     print(f"prepared {copied} files, rewrote {rewritten}, output {OUT}")
 
 
