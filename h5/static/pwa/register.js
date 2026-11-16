@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Goldstream Technology Inc - 1:1 Replica of Staunton and Henry
+   HK HUNG YAN TRADING LIMITED - 1:1 Replica of Staunton and Henry
    Store Catalog Data, Multi-Language, Multi-Currency, Cart & Guest Checkout
    ========================================================================== */
 (function () {
@@ -8,12 +8,12 @@
   var CDN_BASE = 'https://stauntonandhenry.com/cdn/shop/';
 
   var COMPANY_INFO = {
-    name: 'Goldstream Technology Inc',
-    address: '2108 N ST STE N, Sacramento, CA 95816, United States',
+    name: 'HK HUNG YAN TRADING LIMITED',
+    address: '九龍灣宏開道８號其士商業中心地下１０３室',
     email: 'support@goldstreamtech.com',
-    phone: '+1 (916) 555-0198',
+    phone: '+852 64443048',
     hours: 'Monday – Friday: 9:00 AM – 6:00 PM PST',
-    copyright: '© 2026 Goldstream Technology Inc All rights reserved.'
+    copyright: '© 2026 HK HUNG YAN TRADING LIMITED All rights reserved.'
   };
 
   var FIXED_SHIPPING_USD = 15.00;
@@ -716,7 +716,7 @@
       date: 'April 2026',
       product: 'Modern Chinese Ceramic Hand-Painted Stool',
       title: 'Amazing Craftsmanship & Support',
-      body: 'The products I bought from Goldstream Technology Inc are of amazing quality. The customer service and tracking updates they offered were prompt and helpful.'
+      body: 'The products I bought from HK HUNG YAN TRADING LIMITED are of amazing quality. The customer service and tracking updates they offered were prompt and helpful.'
     },
     {
       author: 'Nicola P.',
@@ -973,7 +973,7 @@
         '<img src="' + p.image + '" alt="' + p.title + '" style="width:100%;aspect-ratio:1/1;object-fit:cover;">' +
       '</div>' +
       '<div>' +
-        '<div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-gold);font-weight:600;margin-bottom:6px;">Goldstream Technology Inc • Verified Specification</div>' +
+        '<div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-gold);font-weight:600;margin-bottom:6px;">HK HUNG YAN TRADING LIMITED • Verified Specification</div>' +
         '<h2 style="font-family:var(--font-serif);font-size:2rem;line-height:1.2;margin-bottom:10px;">' + p.title + '</h2>' +
         '<div class="product-rating" style="margin-bottom:14px;">★★★★★ <span>' + p.rating.toFixed(1) + ' / 5.0 (' + p.reviewsCount + ' verified reviews)</span></div>' +
         '<div style="display:flex;align-items:baseline;gap:12px;margin-bottom:18px;">' +
