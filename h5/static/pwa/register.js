@@ -10,7 +10,6 @@
   var COMPANY_INFO = {
     name: 'HK HUNG YAN TRADING LIMITED',
     address: '九龍灣宏開道８號其士商業中心地下１０３室',
-    email: 'support@goldstreamtech.com',
     phone: '+852 64443048',
     hours: 'Monday – Friday: 9:00 AM – 6:00 PM PST',
     copyright: '© 2026 HK HUNG YAN TRADING LIMITED All rights reserved.'
